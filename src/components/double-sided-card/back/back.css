@@ -1,0 +1,13 @@
+.double-sided-card__back {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 30px;
+	background: #ff2877;
+	box-sizing: border-box;
+	transform-origin: left;
+	transition: .5s;
+	transform: translateX(100%) rotateY(90deg);
+}

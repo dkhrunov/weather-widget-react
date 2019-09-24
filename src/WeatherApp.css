@@ -1,0 +1,12 @@
+.double-sided-card {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 300px;
+	min-height: 400px;
+}
+
+.double-sided-card_active-side {
+	transform: translateX(0) rotateY(0deg);
+}

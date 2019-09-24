@@ -1,0 +1,34 @@
+.forecast {
+	margin: 0;
+	padding: 0;
+}
+
+.double-sided-card__back .forecast {
+	padding: 50px 0 20px;
+}
+
+.forecast__item {
+	padding: 10px 0;
+	border-bottom: 2px solid #fff;
+	display: flex;
+	font-weight: bold;
+	color: #fff;
+}
+ 
+.forecast__item:last-child {
+	border-bottom: none;
+}
+
+.forecast__day {
+	width: 50%;
+}
+
+.forecast__temprature {
+	width: 50%;
+	text-align: right;
+}
+
+.forecast__temprature-min {
+	margin-left: 0.5em;
+	opacity: 0.5;
+}

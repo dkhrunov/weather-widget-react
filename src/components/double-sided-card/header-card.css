@@ -1,0 +1,20 @@
+.header-card__btn {
+	width: 50%;
+	text-align: right;
+	float: right;
+	font-size: 24px;
+	color: #fff;
+	display: block;
+}
+ 
+.header-card__btn .fa {
+	cursor: pointer;
+}
+
+.header-card__text {
+	font-weight: bold;
+	width: 50%;
+	text-align: left;
+	float: left;
+	color: #fff;
+}

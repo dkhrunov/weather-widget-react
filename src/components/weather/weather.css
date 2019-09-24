@@ -1,0 +1,25 @@
+.weather {
+	padding: 50px 0 20px;
+	text-align: center;
+	height: 242.66px;
+	box-sizing: border-box;
+}
+
+.weather__current {
+	margin: 0;
+	padding: 0;
+	font-size: 56px;
+	color: #fff;
+	line-height: 26px;
+}
+
+.weather__day {
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+}
+
+.weather__icon {
+	font-size: 80px;
+	color: #fff;
+}
