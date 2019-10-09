@@ -9,3 +9,11 @@
 	transform-origin: right;
 	transform: translateX(-100%) rotateY(90deg);
 }
+
+.spinner-wrapper {
+	width: 240px;
+	height: 242.66px;
+	display: flex;
+	justify-content: center;
+   align-items: center;
+}

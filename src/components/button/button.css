@@ -1,0 +1,13 @@
+button {
+	color: #fff;
+}
+
+.button-inline {
+	border-width: 0;
+	background: transparent;
+	text-align: inherit;
+	-webkit-font-smoothing: inherit;
+	padding: 0;
+	font-size: inherit;
+	cursor: pointer;
+}

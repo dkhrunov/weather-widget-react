@@ -4,8 +4,7 @@ import './back.css';
 import '../../forecast/forecast.css';
 
 const Back = ({ forecast, findWeatherIcon, getWeekDay, isActivePage, onChangePage  }) => 
-	(forecast) ?
-
+	forecast ?
 		<div className={"double-sided-card__back" + isActivePage('back') }>
 			<div className="header-card">
 				<div className="header-card__text">7 Day Forecast</div>
@@ -20,6 +19,6 @@ const Back = ({ forecast, findWeatherIcon, getWeekDay, isActivePage, onChangePag
 				side ={ "back" }
 			/>
 		</div>
-	: <div className="double-sided-card__back"></div>
+	: null
 
 	export default Back;

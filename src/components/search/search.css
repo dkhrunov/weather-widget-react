@@ -1,0 +1,36 @@
+.search-weather {
+	display: inline-block;
+	width: 50%;
+}
+
+.region {
+	border: none;
+	border-bottom: 2px solid transparent;
+	background: none;
+	width: 90%;
+	color: #fff;
+	font-size: 18px;
+	text-align: center;
+	line-height: 28px;
+	transition: 0.3s;
+}
+
+.region:focus {
+	outline: none;
+	border-bottom: 2px solid #fff;
+}
+
+.region + .fas {
+	color: #fff;
+}
+
+button {
+	color: #fff;
+	border-width: 0;
+	background: transparent;
+	text-align: inherit;
+	-webkit-font-smoothing: inherit;
+	padding: 0;
+	font-size: inherit;
+	cursor: pointer;
+}

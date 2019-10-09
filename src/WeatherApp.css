@@ -10,3 +10,8 @@
 .double-sided-card_active-side {
 	transform: translateX(0) rotateY(0deg);
 }
+
+.Error {
+	color: #ff2877;
+	text-align: center;
+}
