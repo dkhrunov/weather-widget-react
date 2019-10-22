@@ -1,6 +1,6 @@
 .search-weather {
 	display: inline-block;
-	width: 50%;
+	width: 60%;
 }
 
 .region {
@@ -33,4 +33,6 @@ button {
 	padding: 0;
 	font-size: inherit;
 	cursor: pointer;
+	display: inline;
+	outline: none;
 }
