@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import * as config from './config'
-import Front from './components/double-sided-card/front/Front';
-import Back from './components/double-sided-card/back/Back';
-import ForecastContext from './context/ForecastContext';
-import './components/double-sided-card/header-card.css';
+import * as config from '../../config';
+import Front from '../double-sided-card/front/Front';
+import Back from '../double-sided-card/back/Back';
+import WeatherStorage from '../../context/WeatherStorage';
+import '../double-sided-card/header-card.css';
 import './WeatherApp.css';
 
 const PATH_BASE = 'https://api.weatherbit.io/v2.0';
@@ -34,10 +34,13 @@ class WeatherApp extends Component {
 		this.onSearchSubmit = this.onSearchSubmit.bind(this);
 	}
 
-	isActivePage = (value) => ((value===this.state.activePage) ? ' double-sided-card_active-side' : '');
+	// Если видимая часть то возвращает класс для блока
+	isActivePage = (value) => ((value === this.state.activePage) ? ' double-sided-card_active-side' : '');
 
+	// Изменение видимой части компонента
 	onChangePage = (page) => this.setState({ activePage: page });
 
+	// Получение данных по API
 	fetchWeather() {
 		this.setState({ isLoading: true });
 
@@ -59,21 +62,32 @@ class WeatherApp extends Component {
 		event.preventDefault();
 	}
 
+	// Метод жизненого цикла компонента
 	componentDidMount() {
 		this.fetchWeather();
 	}
 
 	render() {
+
 		const { 
 			region, 
 			isLoading, 
-			isError
+			isError,
+			forecast,
 		} = this.state;
+
+		const store = {
+			forecast,
+			region,
+			isLoading,
+			onSearchChange: this.onSearchChange,
+			onSearchSubmit: this.onSearchSubmit,
+		}
 
 		return (
 			!isError ? 
 				<div className="double-sided-card">
-					<ForecastContext.Provider value={this.state.forecast}>
+					<WeatherStorage store={ store }>
 						<Front 
 							region={ region }
 							isActivePage={ this.isActivePage }
@@ -86,7 +100,7 @@ class WeatherApp extends Component {
 							isActivePage={ this.isActivePage }
 							onChangePage ={ this.onChangePage }
 						/>
-					</ForecastContext.Provider>
+					</WeatherStorage>
 				</div>
 			: <div className="Error">
 					<h1>Something went wrong!</h1>

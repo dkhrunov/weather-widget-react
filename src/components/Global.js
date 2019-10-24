@@ -1,5 +1,8 @@
+// Файл с основынми функциями не связанными с компонентами
+
 import React from 'react';
 
+// Код иконки
 const weather = {
 	200: <i className="wi wi-day-storm-showers"></i>,
 	201: <i className="wi wi-day-storm-showers"></i>,
@@ -41,8 +44,10 @@ const weather = {
 	900: <i className="wi wi-rain"></i>,
 }
 
+// Поиск по коду иконку
 export const findWeatherIcon = (code) => weather[code] ? weather[code] : console.log("Not founded!");
 
+// Получение дня недели
 export const getWeekDay = (fulldate) => {
 	let date = new Date(fulldate);
 	let weekDaysName = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];

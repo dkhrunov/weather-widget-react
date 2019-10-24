@@ -1,8 +1,9 @@
 import React from 'react';
 import { findWeatherIcon, getWeekDay, } from '../Global';
-import { withForecast } from '../../context/ForecastContext';
+import { withForecast } from '../../context/WeatherStorage';
 import './forecast.css';
 
+// Создает список елементов для прогноза погоды
 function makeForecastList(forecast, offsetDay, countDay, side) {
 	let forecastList = [];
 
