@@ -41,10 +41,9 @@ const weather = {
 	900: <i className="wi wi-rain"></i>,
 }
 
-const findWeatherIcon = (code) => 
-	weather[code] ? weather[code] : console.log("Not founded!");
+export const findWeatherIcon = (code) => weather[code] ? weather[code] : console.log("Not founded!");
 
-const getWeekDay = (fulldate) => {
+export const getWeekDay = (fulldate) => {
 	let date = new Date(fulldate);
 	let weekDaysName = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 

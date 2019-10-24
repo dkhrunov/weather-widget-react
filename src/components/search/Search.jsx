@@ -1,7 +1,7 @@
 import React from 'react';
 import './search.css';
 
-const Search = ({ value, onChange, onSubmit, children }) =>
+const Search = ({ value, onChange, onSubmit, children }) => (
 	<div className="search-weather">
 		<form onSubmit={ onSubmit }>
 		<button type="submit">
@@ -16,5 +16,6 @@ const Search = ({ value, onChange, onSubmit, children }) =>
 	</form>
 	{children}
 	</div>
+)
 
 export default Search;

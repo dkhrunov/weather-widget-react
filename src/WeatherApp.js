@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import * as config from './config'
 import Front from './components/double-sided-card/front/Front';
 import Back from './components/double-sided-card/back/Back';
+import ForecastContext from './context/ForecastContext';
 import './components/double-sided-card/header-card.css';
 import './WeatherApp.css';
 
@@ -65,7 +66,6 @@ class WeatherApp extends Component {
 	render() {
 		const { 
 			region, 
-			forecast, 
 			isLoading, 
 			isError
 		} = this.state;
@@ -73,20 +73,20 @@ class WeatherApp extends Component {
 		return (
 			!isError ? 
 				<div className="double-sided-card">
-					<Front 
-						region={ region }
-						forecast={ forecast }
-						isActivePage={ this.isActivePage }
-						onChangePage ={ this.onChangePage }
-						onSearchChange={ this.onSearchChange }
-						onSearchSubmit={ this.onSearchSubmit }
-						isLoading={ isLoading }
-					/>
-					<Back 
-						forecast={ forecast }
-						isActivePage={ this.isActivePage }
-						onChangePage ={ this.onChangePage }
-					/>
+					<ForecastContext.Provider value={this.state.forecast}>
+						<Front 
+							region={ region }
+							isActivePage={ this.isActivePage }
+							onChangePage ={ this.onChangePage }
+							onSearchChange={ this.onSearchChange }
+							onSearchSubmit={ this.onSearchSubmit }
+							isLoading={ isLoading }
+						/>
+						<Back 
+							isActivePage={ this.isActivePage }
+							onChangePage ={ this.onChangePage }
+						/>
+					</ForecastContext.Provider>
 				</div>
 			: <div className="Error">
 					<h1>Something went wrong!</h1>

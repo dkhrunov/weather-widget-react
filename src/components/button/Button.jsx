@@ -1,7 +1,7 @@
 import React from 'react';
 import './button.css';
 
-const Button = ({ onClick, className='', children }) =>
+const Button = ({ onClick, className='', children }) => (
 	<button
 		onClick={onClick}
 		className={className}
@@ -9,5 +9,6 @@ const Button = ({ onClick, className='', children }) =>
 	>
 		{children}
 	</button>
+)
 
 export default Button;
