@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import WeatherApp from './components/WeatherApp/WeatherApp';
+import WeatherApp from './components/weatherApp/WeatherApp';
 import * as serviceWorker from './serviceWorker';
 import './index.css';
 
