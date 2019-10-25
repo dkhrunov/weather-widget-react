@@ -6,17 +6,14 @@ const Search = withSearchData(
 	({ region, onChange, onSubmit, children }) => (
 		<div className="search-weather">
 			<form onSubmit={ onSubmit }>
-			<button type="submit">
-				<i className="fas fa-map-marker-alt"></i>
-			</button>
-			<input 
-				className="region"
-				type="text"
-				value={ region }
-				onChange={ onChange }
-			/>
-		</form>
-		{children}
+				<input 
+					className="region"
+					type="text"
+					value={ region }
+					onChange={ onChange }
+				/>
+			</form>
+			{children}
 		</div>
 	)
 );

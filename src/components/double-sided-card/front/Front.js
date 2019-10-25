@@ -9,7 +9,7 @@ const Front = ({ isActivePage, onChangePage, isLoading }) => (
 		<div className="header-card">
 			<Search />
 			<div className="header-card__btn more">
-				<i className="fa fa-info-circle" aria-hidden="true" onClick={() => onChangePage('back')}></i>
+				<i className="fa fa-chevron-circle-right" aria-hidden="true" onClick={() => onChangePage('back')}></i>
 			</div>
 		</div>
 		<Weather />
