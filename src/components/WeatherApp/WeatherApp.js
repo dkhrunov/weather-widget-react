@@ -88,12 +88,9 @@ class WeatherApp extends Component {
 			!isError ? 
 				<div className="double-sided-card">
 					<WeatherStorage store={ store }>
-						<Front 
-							region={ region }
+						<Front
 							isActivePage={ this.isActivePage }
 							onChangePage ={ this.onChangePage }
-							onSearchChange={ this.onSearchChange }
-							onSearchSubmit={ this.onSearchSubmit }
 							isLoading={ isLoading }
 						/>
 						<Back 

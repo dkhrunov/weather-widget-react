@@ -1,21 +1,38 @@
 import React from 'react';
-import { withSearchData } from '../../context/WeatherStorage';
+import { useWeatherContext } from '../../context/WeatherStorage';
 import './search.css';
 
-const Search = withSearchData(
-	({ region, onChange, onSubmit, children }) => (
+// const Search = withSearchData(
+// 	({ region, onChange, onSubmit, children }) => (
+// 		<div className="search-weather">
+// 			<form onSubmit={ onSubmit }>
+// 				<input 
+// 					className="region"
+// 					type="text"
+// 					value={ region }
+// 					onChange={ onChange }
+// 				/>
+// 			</form>
+// 			{children}
+// 		</div>
+// 	)
+// );
+
+const Search = ({ children }) => {
+	const value = useWeatherContext();
+	return (
 		<div className="search-weather">
-			<form onSubmit={ onSubmit }>
+			<form onSubmit={ value.onSearchSubmit }>
 				<input 
 					className="region"
 					type="text"
-					value={ region }
-					onChange={ onChange }
+					value={ value.region }
+					onChange={ value.onSearchChange }
 				/>
 			</form>
 			{children}
 		</div>
 	)
-);
+}
 
 export default Search;

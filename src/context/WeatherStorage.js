@@ -1,7 +1,7 @@
 // Чтобы не пробрасывать пропсы (props drilling) через компоненты которым они не нужны,
 // хранение всех состояний приложения сводиться в одно место, nиспользуя React Context.
 
-import React from 'react';
+import React, { useContext } from 'react';
 
 // Создание контекста
 const WeatherContext = React.createContext();
@@ -47,5 +47,14 @@ export const withSearchData = (Component) => (props) => (
 		}
 	</WeatherContext.Consumer>
 )
+
+// Использование хука контекста, который просто вовращает все хрнаимые значения в storage
+export const useWeatherContext = () => useContext(WeatherContext);
+
+// Аналогичем этому
+// const useWeatherContext = () => { 
+// 	const value = useContext(WeatherContext);
+// 	return value;
+// }
 
 export default WeatherStorage;
