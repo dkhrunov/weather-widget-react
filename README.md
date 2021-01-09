@@ -1,5 +1,5 @@
-# WeatherApp
-Building Weather App, using ReactJS
+# Weather widget
+Building weather widget, using ReactJS
 
 # Example:
 ![Example](https://github.com/therealpanda98/WeatherApp-ReactJS/blob/master/Screenshots/main.gif)
